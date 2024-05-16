@@ -10,7 +10,7 @@ const jwt = require("jsonwebtoken");
 app.use(express.json())
 app.use(cors())
 
-const Port=process.env.PORT || 5000
+const PORT=process.env.PORT || 5000
 const JWT_SECRET = process.env.JWT_SECRET;
 const url = process.env.url;
 
@@ -21,13 +21,11 @@ mongoose.connect(url, {
 }).catch((e)=>console.log(e));
 
 
-app.post("/home" ,async(req,res)=>{
+app.get("/home" ,async(req,res)=>{
     console.log("jai Shree ram");
 })
-app.listen(Port,()=>{
+app.listen(PORT,()=>{
     console.log("jai shree ram");
-    
-console.log(process.env.url);
 })
 
 app.post("/post",async(req,res)=>{
