@@ -21,7 +21,9 @@ mongoose.connect(url, {
 }).catch((e)=>console.log(e));
 
 
-
+app.post("/home" ,async(req,res)=>{
+    console.log("jai Shree ram");
+})
 app.listen(Port,()=>{
     console.log("jai shree ram");
     
